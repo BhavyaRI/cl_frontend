@@ -22,7 +22,7 @@ function CodeforcesDashboard() {
     setError(null);
     setInfo(null);
     try {
-      const response = await axios.get(`/api/${handle}`);
+      const response = await axios.get(`https://cl-backend-iota.vercel.app/api/${handle}`);
       const { info, problemgraph, ratinggraph, tagscount } = response.data;
       setInfo(info);
       setProblemGraph(problemgraph);

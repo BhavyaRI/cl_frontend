@@ -107,7 +107,7 @@ const UpcomingContestsPage = () => {
 
     const upcomingcnt = async () => {
       try {
-        const response = await axios.get("/api/contests/upcoming");
+        const response = await axios.get("https://cl-backend-iota.vercel.app/api/contests/upcoming");
         
         const newData = response.data
           .map(contest => ({

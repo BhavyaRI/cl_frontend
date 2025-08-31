@@ -17,7 +17,7 @@ function LeetcodeDashboard() {
     setError(null);
     setUserData(null);
     try {
-      const response = await axios.get(`/api/leetcode/${username}`);
+      const response = await axios.get(`https://cl-backend-iota.vercel.app/api/leetcode/${username}`);
       setUserData(response.data);
     } catch (err) {
       if (err.response && err.response.status === 404) {
