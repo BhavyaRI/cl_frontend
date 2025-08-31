@@ -94,10 +94,7 @@ const UpcomingContestsPage = () => {
 
   useEffect(() => {
     const starttimeparsed = (timeStr) => {
-      const [datePart, timePart] = timeStr.split(', ');
-      const [day, month, year] = datePart.split('/');
-      const parsableDateString = `${month}/${day}/${year}, ${timePart}`;
-      return new Date(parsableDateString).getTime() / 1000;
+      return new Date(timeStr).getTime() / 1000;
     };
 
     const durationparsed = (durationStr) => {
